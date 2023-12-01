@@ -1,0 +1,152 @@
+.photoscont {
+  margin: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+
+  .photopre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3a3a3a;
+
+    @media (min-width: $tablet) {
+      width: 70%;
+    }
+
+    @media (min-width: $descktop) {
+      width: 50%;
+    }
+
+    img {
+      object-position: center;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+  .photoinfo {
+    @media (min-width: $tablet) {
+      width: 30%;
+    }
+
+    @media (min-width: $descktop) {
+      width: 50%;
+    }
+
+    .author {
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      h3 {
+        width: 100%;
+      }
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        margin: 0 1rem;
+      }
+    }
+
+    h3 {
+      color: #cccc;
+      margin: 0 0 1rem 0;
+    }
+
+    .location {
+      padding: 1rem;
+    }
+
+    .date {
+      padding: 1rem;
+      color: $otherbtn;
+    }
+
+    div {
+      border: 1px solid rgb(58, 58, 58);
+    }
+  }
+}
+
+.related {
+  display: flex;
+  flex-wrap: wrap;
+
+  h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  h4 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+}
+
+.infocont {
+  margin: 0.5rem;
+
+  div {
+    border: 1px solid rgb(58, 58, 58);
+  }
+
+  h4 {
+    color: $otherbtn;
+  }
+
+  h3 {
+    color: #cccc;
+    margin: 0 0 1rem 0;
+  }
+
+  a {
+    margin: 1rem;
+  }
+
+  .social {
+    padding: 0 0 1rem 0;
+
+    a {
+      text-align: center;
+    }
+  }
+
+  .tattooercont {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tattooerphoto {
+      padding: 2rem;
+
+      @media (min-width: $tablet) {
+        width: 70%;
+      }
+
+      @media (min-width: $descktop) {
+        width: 50%;
+      }
+
+      img {
+        object-position: center;
+        width: 500px;
+        height: 500px;
+        border-radius: 8px;
+      }
+    }
+
+    .tattooerinfo {
+      @media (min-width: $tablet) {
+        width: 30%;
+      }
+
+      @media (min-width: $descktop) {
+        width: 50%;
+      }
+    }
+  }
+}

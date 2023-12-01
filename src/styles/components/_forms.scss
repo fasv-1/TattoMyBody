@@ -1,0 +1,214 @@
+//-------Inicio da Log on modal-------
+
+.country-btn {
+  padding: 1rem 0;
+  // width: 50%;
+  background-color: $otherbtn;
+  border: none;
+  border-radius: 8px;
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+#logon {
+  @media (min-width: $descktop) {
+    width: 100%;
+
+    .modalcontainer {
+      margin: 2rem;
+
+      .xclose {
+        top: 90px;
+      }
+    }
+  }
+
+  .logoncontainer {
+    background-color: $cordefundo;
+    background-image: url("../app/images/black-thread.png");
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .xclose {
+      cursor: pointer;
+      fill: #ffff;
+      position: absolute;
+      right: 0;
+      top: 15px;
+      width: 20%;
+
+      &:hover {
+        animation-name: jump;
+        animation-duration: 0.5s;
+      }
+
+      .top {
+        transform: rotate(45deg) translateX(-3px) translateY(0px);
+      }
+
+      .bottom {
+        transform: rotate(-45deg) translateX(-23px) translateY(0px);
+      }
+
+      @media (min-width: $tablet) {
+        width: 10%;
+        top: 40px;
+      }
+
+      @media (min-width: $descktop) {
+        right: 30px;
+      }
+    }
+
+    .form {
+      height: 100%;
+      width: 100%;
+
+      @media (min-width: $descktop) {
+        .log-container {
+          width: 100%;
+        }
+      }
+
+      .log-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        &.in {
+          margin-top: 2rem;
+
+          @media (min-width: $tablet) {
+            margin: 2rem 0;
+          }
+        }
+
+        .nolog {
+          margin: 0 1rem;
+
+          p {
+            margin-top: 0.5rem;
+
+            a {
+              text-decoration: none;
+              color: $otherbtn;
+            }
+          }
+        }
+
+        @media (min-width: $tablet) {
+          margin: 2rem 0;
+
+          img {
+            width: 250px;
+          }
+
+          div {
+            margin-top: 2rem;
+          }
+
+          h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        img {
+          width: 35%;
+        }
+
+        h2 {
+          color: $otherbtn;
+          font-family: "Rye", cursive;
+          font-weight: 100;
+        }
+
+        section {
+          margin: 0 0.5rem 0 0.5rem;
+
+          @media (min-width: $tablet) {
+            border: 1px solid rgb(41, 41, 41);
+            background: rgb(43, 43, 43);
+            box-shadow: 0px 0px 10px 0px rgba(217, 165, 32, 1);
+            border-radius: 8px;
+            padding: 1rem 1rem 0 1rem;
+            margin: 1rem 0;
+          }
+
+          div {
+            margin: 1rem 0;
+            padding: 0 5% 0 5%;
+
+            label {
+              color: white;
+            }
+
+            input {
+              background: transparent;
+              border: 1px solid $otherbtn;
+              border-radius: 8px;
+              color: $cordeletra1;
+              line-height: 1;
+              margin: 0.1rem 0;
+              padding: 0.5rem 3rem;
+              width: 100%;
+              text-align: center;
+
+              &::placeholder {
+                color: hsla(0, 0%, 55%, 0.582);
+              }
+
+              &:focus {
+                background: transparent;
+              }
+            }
+          }
+
+          .checkboxes {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 2rem;
+            justify-content: center;
+
+            @media (min-width: $tablet) {
+              margin: 2rem 1rem;
+
+              li {
+                margin: 0 1rem;
+
+                &.c {
+                  width: 33%;
+                }
+
+                &.f {
+                  width: 45%;
+                  margin: -1rem;
+                }
+              }
+            }
+
+            li {
+              padding: 0 0.5rem;
+
+              .sendonform {
+                color: $cordeletra1;
+                background-color: goldenrod;
+                border-radius: 8px;
+                border: none;
+                font-size: 1rem;
+                padding: 0.5rem 2.5rem;
+                cursor: pointer;
+                margin: 1rem auto;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

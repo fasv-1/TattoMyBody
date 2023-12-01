@@ -1,0 +1,182 @@
+#tattoosmenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4rem;
+
+  h4 {
+    margin: 0 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropbtn {
+    background-color: $otherbtn;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    margin-top: 3rem;
+    padding: 1rem;
+    width: 18rem;
+    -webkit-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 1);
+    box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 1);
+
+    @media (min-width: $tablet) {
+      font-size: 1.5rem;
+      font-weight: bolder;
+      width: 30rem;
+    }
+
+    @media (min-width: $descktop) {
+      width: 50rem;
+    }
+
+    &:hover,
+    :focus {
+      background-color: rgb(167, 128, 29);
+    }
+  }
+
+  .dropdownTattoo {
+    display: inline-block;
+    position: relative;
+  }
+
+  .dropdown-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    display: none;
+    font-size: 1rem;
+    min-width: 160px;
+    overflow: auto;
+    position: absolute;
+    text-align: center;
+    width: 18rem;
+    z-index: 1;
+
+    @media (min-width: $tablet) {
+      width: 30rem;
+    }
+
+    @media (min-width: $tablet) {
+      width: 50rem;
+    }
+
+    a {
+      color: $cordeletra1;
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: rgb(68, 68, 68);
+      }
+    }
+  }
+
+  .show {
+    display: block;
+  }
+}
+
+#tattoosplace {
+  height: 100%;
+  width: 100%;
+  margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: $descktop) {
+    justify-content: flex-start;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .introduçao {
+    width: 100%;
+    margin: 2rem 2rem 1rem 1rem;
+
+    @media (min-width: $tablet) {
+      h1 {
+        // margin: 0 0 1rem 3rem;
+        font-size: 3rem;
+        color: $otherbtn;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    h1 {
+      margin: 0 0 1rem 2rem;
+      width: 100%;
+      color: $otherbtn;
+    }
+  }
+
+  h1 {
+    margin: 3rem 0 1rem 1rem;
+    width: 100%;
+    color: $otherbtn;
+    font-weight: bolder;
+
+    @media (min-width: $tablet) {
+      font-size: 3rem;
+      margin: 6rem 0 1rem 3rem;
+    }
+  }
+}
+
+.tattoos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  h1 {
+    margin: 3rem 0 1rem 1rem;
+    width: 100%;
+    color: $otherbtn;
+    font-weight: bolder;
+
+    @media (min-width: $tablet) {
+      font-size: 3rem;
+      margin: 6rem 0 1rem 3rem;
+    }
+  }
+
+  div {
+    margin: 0.2rem;
+    cursor: pointer;
+    height: 10rem;
+    width: 9.5rem;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 1);
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      height: 12rem;
+      width: 11rem;
+    }
+
+    @media (min-width: $descktop) {
+      height: 16rem;
+      width: 16rem;
+    }
+
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

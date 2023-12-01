@@ -1,0 +1,357 @@
+//******************************
+//-------Inicio do Header-------
+//******************************
+
+//-------Inicio da LogoBar-------
+#logoBar {
+  align-items: center;
+  background: $logobg;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  width: 100%;
+
+  .socialmedia {
+    align-items: center;
+    display: none;
+    justify-content: flex-end;
+
+    i {
+      color: $cordeletra1;
+      padding: 2rem;
+
+      &:hover {
+        color: $otherbtn;
+        transition: color .2s ease-out;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      display: flex;
+      width: 30%;
+    }
+
+    @media (min-width: $descktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0;
+      padding: 0 0.5rem;
+      width: 25%;
+    }
+  }
+
+  .logoimage {
+    align-items: center;
+    display: flex;
+    margin-left: 1rem;
+    width: 40%;
+
+    img {
+      height: 100px;
+      width: 100%;
+    }
+
+    @media (min-width: $tablet) {
+      justify-content: center;
+      margin: 0;
+      width: 30%;
+    }
+
+    @media (min-width: $descktop) {
+      justify-content: center;
+      width: 25%;
+
+      img {
+        height: 140px;
+      }
+    }
+  }
+
+  .signs {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: flex-start;
+    width: 25%;
+    font-size: 1.1rem;
+
+    a {
+      color: $cordeletra1;
+      transition: color .2s ease;
+
+      &:hover {
+        color: $otherbtn;
+        transition: color .2s ease;
+      }
+    }
+
+    .sign-in {
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      width: 30%;
+
+      .sign-in {
+        margin: 0 1rem;
+      }
+    }
+
+    @media (min-width: $descktop) {
+      flex-direction: row;
+      justify-content: center;
+      padding: 0 0.5rem;
+      width: 25%;
+
+      .sign-in {
+        margin: 0 3rem;
+      }
+    }
+  }
+}
+
+//-------Fim da Logobar-------
+//-------Inicio da Navbar-------
+#navbar {
+  background-color: $navcolor;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.45);
+  height: auto;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 900;
+  display: block;
+  justify-content: center;
+
+  &.transp {
+    background: rgba(39, 39, 39, 0.75);
+    border-bottom: 1px solid#0000;
+
+    .nav-items {
+      .toggle {
+        .minilogo {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    padding-left: 2rem;
+  }
+
+  //-------Inicio do Menu-------
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      margin-left: 3rem;
+    }
+
+    ul {
+      align-items: center;
+      display: none;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      li {
+        display: block;
+        cursor: pointer;
+      }
+
+      @media (min-width: $tablet) {
+        display: flex;
+        flex-direction: row;
+
+        a {
+          padding: 1rem 2rem;
+        }
+      }
+
+      @media (min-width: $descktop) {
+        display: flex;
+        justify-content: center;
+
+        li {
+          margin: 0 .8rem;
+          border-bottom: 1px solid transparent;
+          transition: border .3s ease-in-out;
+        }
+      }
+
+      @media (min-width: $descktop-fhd) {
+        li {
+          padding: 0 1rem;
+        }
+      }
+
+      li:hover {
+        border-bottom: 1px solid $otherbtn;
+        transition: border .3s ease-in-out;
+      }
+
+      &.menuOpen {
+        display: flex;
+
+        li {
+          border-bottom: 1px solid #ffff;
+        }
+      }
+
+      a {
+        color: $cordeletra1;
+        display: block;
+        padding: 1rem;
+      }
+    }
+  }
+
+  //-------Fim do Menu--------
+
+  .toggle {
+    align-items: center;
+    color: $cordeletra1;
+    display: flex;
+    height: auto;
+    justify-content: flex-end;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      width: auto;
+
+      .minilogo {
+        display: block;
+        margin-right: 1rem;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    @media (min-width: $descktop-fhd) {
+      padding-left: 4rem;
+    }
+
+    @media (min-width: $descktop) {
+      justify-content: center;
+      padding-left: 2rem;
+
+      .minilogo {
+        width: auto;
+        margin-right: 2rem;
+
+        a {
+          font-size: 2rem;
+          transition: color .4s;
+
+          &:hover {
+            color: $otherbtn;
+            transition: color .4s;
+          }
+        }
+      }
+    }
+
+    .minilogo {
+      align-items: center;
+      display: none;
+      justify-content: flex-start;
+      width: 60%;
+
+      a {
+        color: $cordeletra1;
+        font-family: "Rye", cursive;
+        font-size: 1.6rem;
+      }
+    }
+
+    svg {
+      fill: $cordeletra1;
+      margin-right: 2rem;
+
+      .top {
+        transform: rotate(0deg) translateX(0px) translateY(0px);
+
+        @include anim(transform);
+      }
+
+      .middle {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      .bottom {
+        transform: rotate(0deg) translateX(0px) translateY(0px);
+
+        @include anim(transform);
+      }
+
+      &.closeMenu {
+        .top {
+          transform: rotate(45deg) translateX(4px) translateY(-7px);
+
+          @include anim(transform);
+        }
+
+        .middle {
+          opacity: 0;
+        }
+
+        .bottom {
+          transform: rotate(-45deg) translateX(-13px) translateY(0px);
+
+          @include anim(transform);
+        }
+      }
+    }
+  }
+
+  .users {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 1rem;
+
+    &.menuOpen {
+      display: flex;
+      background-color: rgba(87, 87, 87, 0.8);
+      margin: 1rem 3rem 0 3rem;
+      border-radius: 10px;
+    }
+
+    @media (min-width: $tablet) {
+      width: 20%;
+      display: flex;
+    }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+    }
+
+    .exit {
+      padding: 1rem;
+    }
+  }
+}
+//-------Fim da Navbar-------
+
+//***************************
+//-------Fim do Header-------
+//***************************

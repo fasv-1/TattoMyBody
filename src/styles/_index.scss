@@ -1,0 +1,217 @@
+//----------------------About------------------------
+#aboutcont {
+  .about {
+    text-align: center;
+
+    h1 {
+      color: $otherbtn;
+      font-size: 2rem;
+      font-weight: bolder;
+      margin: 1rem 1rem;
+      text-align: center;
+
+      @media (min-width: $descktop) {
+        font-size: 3rem;
+        width: 70%;
+        text-align: center;
+        border-bottom: 2px solid $otherbtn;
+        line-height: 0.1em;
+        margin: 10rem auto 6rem auto;
+        padding: 0 1rem;
+
+        span {
+          background: $cordefundo;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+//-----------------------------------------------------------
+//-----------------tatuagens em destaque---------------------
+#masonry {
+  margin: 4rem 1rem 2rem 1rem;
+
+  h1 {
+    color: $otherbtn;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 1rem 1rem;
+    text-align: center;
+
+    @media (min-width: $descktop) {
+      font-size: 3rem;
+      width: 70%;
+      text-align: center;
+      border-bottom: 2px solid $otherbtn;
+      line-height: 0.1em;
+      margin: 10rem auto 6rem auto;
+      padding: 0 1rem;
+
+      span {
+        background: $cordefundo;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .picture {
+    column-gap: 1rem;
+    columns: 2 auto;
+    padding: 1rem;
+
+    @media (min-width: $descktop) {
+      columns: 4 auto;
+    }
+
+    div {
+      display: block;
+      height: auto;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        transform: scale(1);
+        transition: transform 0.2s ease-in-out;
+        transition-duration: 0.6s;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 0.2s ease-in-out;
+          transition-duration: 0.6s;
+        }
+      }
+    }
+
+    @for $i from 1 through 16 {
+      div:nth-child(#{$i}) {
+        height: 300px;
+        line-height: 10px;
+      }
+    }
+  }
+}
+
+//------------------------------------------------------------
+//-----------------tatuadores em destaque---------------------
+#tattoersplace {
+  margin-top: 6rem;
+  padding: 1rem 0 4rem 0;
+  background-color: $cordefundo;
+
+  h1 {
+    color: $otherbtn;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 1rem 1rem;
+    text-align: center;
+
+    @media (min-width: $descktop) {
+      font-size: 3rem;
+      width: 70%;
+      text-align: center;
+      border-bottom: 2px solid $otherbtn;
+      line-height: 0.1em;
+      margin: 6rem auto 6rem auto;
+      padding: 0 1rem;
+
+      span {
+        background: $cordefundo;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  #tattooerscard {
+    background-color: transparent;
+    display: flex;
+    overflow-x: auto;
+    padding: 0 1rem;
+    width: 100%;
+
+    .tattooercard {
+      -moz-box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 1);
+      -webkit-box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 1);
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.025);
+      border-radius: 8px;
+      box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 1);
+      cursor: pointer;
+      height: 400px;
+      margin: 20px;
+      position: relative;
+      width: auto;
+
+      .label {
+        border-radius: 8px;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      .text-content {
+        color: $cordeletra1;
+        padding-top: 60px;
+        text-align: center;
+        transform: translateY(-380px);
+        transition: transform 1000ms;
+
+        .title {
+          font-weight: bold;
+          font-size: 3rem;
+        }
+
+        .body-text {
+          font-size: 1rem;
+          margin-bottom: 2rem;
+        }
+
+        a {
+          color: $otherbtn;
+          padding: 0 1rem;
+        }
+      }
+
+      .chevron {
+        bottom: 20px;
+        left: calc(50% - 15px);
+        position: absolute;
+        transform: rotate(180deg);
+        transition: transform 1000ms;
+      }
+    }
+
+    .tattooercard.expanded {
+      height: auto;
+
+      .text-content {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+        height: 400px;
+        text-align: center;
+        transform: translateY(0);
+        transition: transform 1000ms;
+        width: 100%;
+      }
+
+      .chevron {
+        bottom: 20px;
+        left: calc(50% - 15px);
+        position: absolute;
+        transform-origin: 50%;
+        transform: rotate(360deg);
+        transition: transform 1000ms;
+      }
+    }
+  }
+}

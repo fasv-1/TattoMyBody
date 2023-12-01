@@ -1,0 +1,224 @@
+#tatuadoresmenu {
+  margin-top: 5rem;
+
+  h2 {
+    margin: 2rem;
+    color: $otherbtn;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    @media (min-width: $tablet) {
+      font-size: 2rem;
+    }
+  }
+
+  .menucontainer {
+    display: flex;
+    overflow-x: auto;
+    background: $navcolor;
+    padding: 1rem 1rem;
+    -webkit-box-shadow: inset 0px 0px 50px -23px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0px 0px 50px -23px rgba(0, 0, 0, 1);
+    box-shadow: inset 0px 0px 50px -23px rgba(0, 0, 0, 1);
+
+    &::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(95, 95, 95, 0.3);
+      box-shadow: inset 0 0 6px rgba(95, 95, 95, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(71, 71, 71, .3);
+      border-radius: 10px;
+      border: 1px solid rgb(73, 73, 73);
+
+      &:hover {
+        background-color: rgba(71, 71, 71, 1);
+      }
+    }
+
+    @media (min-width: $descktop) {
+      font-size: 2rem;
+      justify-content: center;
+    }
+
+    div {
+      width: 6.25rem;
+      height: 12.5rem;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      text-align: center;
+      margin: 0.5rem;
+      -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 1);
+      box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 1);
+
+      .overlay {
+        display: flex;
+        width: 6.25rem;
+        height: 12.5rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        color: $otherbtn;
+        opacity: 1;
+      }
+
+      @media (min-width: $descktop) {
+        width: 7.5rem;
+        height: 12rem;
+        justify-content: center;
+
+        .overlay {
+          opacity: 0;
+          width: 7.5rem;
+          height: 12rem;
+        }
+      }
+
+      &:hover {
+        .overlay {
+          opacity: 1;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+#tatuadores {
+  height: auto;
+  margin: 5rem 0;
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    h1 {
+      margin: 3rem 1rem 2rem 1rem;
+      width: 100%;
+      color: $otherbtn;
+      font-weight: bolder;
+
+      @media (min-width: $tablet) {
+        font-size: 3rem;
+        margin-left: 3rem;
+      }
+    }
+
+    .card {
+      width: 20rem;
+      height: 27.5rem;
+      position: relative;
+      object-position: center;
+      object-fit: cover;
+      margin: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      -webkit-box-shadow: 0px 10px 20px -2px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0px 10px 20px -2px rgba(0, 0, 0, 1);
+      box-shadow: 0px 10px 20px -2px rgba(0, 0, 0, 1);
+
+      @media (min-width: $tablet) {
+        width: 22rem;
+        height: 28.5rem;
+
+        img {
+          max-height: 28.5rem;
+        }
+      }
+
+      @media (min-width: $descktop) {
+        width: 23rem;
+        height: 31.5rem;
+        margin-left: 2rem;
+
+        img {
+          max-height: 30.5rem;
+        }
+      }
+
+      img {
+        border-radius: 8px;
+        object-fit: cover;
+        width: 100%;
+        max-height: 27.5rem;
+      }
+
+      .cardInfo {
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        left: 0;
+        padding: 1.5rem 1rem;
+        background-color: $navcolor;
+        width: auto;
+        height: auto;
+        align-items: center;
+        border-radius: 8px;
+        justify-content: center;
+
+        @media (min-width: $descktop) {
+          .location {
+            h3 {
+              font-size: 1.5rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .tattooerlogo {
+          width: 30%;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            margin: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+          }
+        }
+
+        .location {
+          display: flex;
+          width: 70%;
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+          margin-top: 0;
+
+          h3 {
+            width: 100%;
+            font-size: 1.2rem;
+          }
+
+          p {
+            color: $cordeletra2;
+            text-align: center;
+            width: 100%;
+            padding: 0.5rem 0;
+          }
+
+          a {
+            display: initial;
+            text-align: center;
+            padding: 0 1rem;
+            color: $otherbtn;
+          }
+        }
+      }
+    }
+  }
+}

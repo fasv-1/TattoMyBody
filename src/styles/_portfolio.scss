@@ -1,0 +1,390 @@
+.container {
+  .form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+.tattooer-name {
+  h1 {
+    color: $otherbtn;
+    font-family: "Rye", cursive;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+.container-menu {
+  ul {
+    display: flex;
+    border-bottom: 1px solid $otherbtn;
+    overflow-x: auto;
+    padding: 0 1rem;
+
+    li {
+      padding: 1rem;
+      margin: 1rem 1rem 0 0;
+      color: $otherbtn;
+      box-shadow: 0px -4px 10px 0px rgb(217, 165, 32);
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      cursor: pointer;
+
+      h3 {
+        font-weight: bolder;
+      }
+
+      &:hover {
+        background-color: $otherbtn;
+        color: black;
+      }
+
+      &.selected {
+        background-color: $otherbtn;
+        color: black;
+      }
+    }
+  }
+}
+
+.tattooer-perfil {
+  display: none;
+
+  &.appear {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .pic {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+.tattooer-images {
+  display: none;
+
+  &.appear {
+    display: flex;
+
+    .vw {
+      width: 100%;
+      margin: auto;
+      // text-align: center;
+
+      label {
+        font-size: 1.5rem;
+      }
+
+      input {
+        margin: 0 0.5rem;
+        padding: 1rem;
+        width: 50%;
+        border-radius: 50px;
+        background-color: $navcolor;
+        color: $cordeletra1;
+        font-size: 1rem;
+        border: none;
+      }
+    }
+
+    #pic-loaded {
+      display: flex;
+      flex-wrap: wrap;
+      // margin: 3rem;
+      width: 100%;
+      justify-content: center;
+
+      h2 {
+        width: 100%;
+        color: $otherbtn;
+        margin: 2rem 1rem 0 1rem;
+      }
+
+      .images-upl {
+        width: 15rem;
+        padding: 0.5rem 1rem;
+        margin-top: 2rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .delimg {
+          position: absolute;
+          display: none;
+        }
+
+        &:hover {
+          .delimg {
+            display: block;
+          }
+        }
+      }
+
+      p {
+        width: 100%;
+        margin-top: 2rem;
+        color: $otherbtn;
+        font-weight: bolder;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.style-cont {
+  width: 100%;
+  display: flex;
+
+  h2 {
+    color: $otherbtn;
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+.style-option {
+  padding: 1rem;
+  background-color: $otherbtn;
+  border: none;
+  border-radius: 8px;
+  margin: auto;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tattooer-news {
+  display: none;
+
+  &.appear {
+    display: flex;
+  }
+
+  .have-all {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .section-title {
+    display: flex;
+    justify-content: flex-start;
+
+    p {
+      margin: 1rem;
+    }
+  }
+
+  .addbtn {
+    align-items: center;
+    background-color: #000;
+    border-radius: 8px;
+    border: 0;
+    display: flex;
+    font-weight: 900;
+    padding: 8px 10px;
+    margin: 1rem;
+
+    a {
+      color: $otherbtn;
+    }
+
+    svg {
+      height: 16px;
+      margin-right: 8px;
+      width: 16px;
+    }
+  }
+}
+
+.tattooer-contacts {
+  display: none;
+
+  &.appear {
+    display: flex;
+  }
+
+  .social-media {
+    width: 100%;
+    display: flex;
+    background-color: #202020;
+
+    li {
+      width: 100%;
+    }
+  }
+}
+
+h2 {
+  color: $otherbtn;
+  margin: 3rem 1rem 1rem 1rem;
+  font-weight: bolder;
+}
+
+.joi {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: rgb(61, 61, 61);
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+
+  ul {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    .v {
+      width: 100%;
+
+      @media (min-width: $tablet) {
+        width: 50%;
+      }
+
+      input {
+        padding: 1rem;
+        width: 100%;
+        border-radius: 10px;
+        background-color: $navcolor;
+        color: $cordeletra1;
+        font-size: 1rem;
+        border: none;
+      }
+    }
+
+    .pictu {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      margin-top: 1rem;
+
+      label {
+        margin: 1rem 0;
+      }
+
+      .custom::-webkit-file-upload-button {
+        visibility: hidden;
+      }
+
+      .custom::before {
+        content: "Select some files";
+        display: inline-block;
+        background: $otherbtn;
+        border: 1px solid rgb(206, 148, 2);
+        border-radius: 8px;
+        padding: 1rem 5rem;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 1rem;
+        color: black;
+
+        &:hover {
+          border-color: black;
+        }
+      }
+    }
+
+    .descrip {
+      width: 100%;
+
+      textarea {
+        padding: 0.5rem;
+        width: 100%;
+        border-radius: 10px;
+        background-color: $navcolor;
+        color: $cordeletra1;
+        font-size: 1rem;
+        border: none;
+
+        &.focus {
+          border: none;
+        }
+      }
+    }
+
+    li {
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+
+      label {
+        width: 100%;
+        font-size: 2rem;
+        color: $otherbtn;
+      }
+    }
+  }
+
+  span {
+    font-size: 14px;
+    color: #cccc;
+  }
+
+  .pay {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $tablet) {
+      label {
+        width: 100%;
+        color: $otherbtn;
+        margin: 0 0.5rem;
+      }
+    }
+
+    div {
+      margin: 1rem auto;
+    }
+
+    input {
+      background-color: $navcolor;
+      border-radius: 8px;
+      color: $cordeletra1;
+      border: none;
+      padding: 0.5rem;
+    }
+  }
+}
+
+.save {
+  text-align: center;
+  margin-top: 2rem;
+
+  .submit {
+    padding: 1rem 3rem;
+    background-color: $otherbtn;
+    border: none;
+    border-radius: 8px;
+    margin: 1rem 2rem 2rem 2rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    transition: background-color 0.2s;
+    text-align: center;
+
+    &:hover {
+      background-color: black;
+      color: $otherbtn;
+      transition: background-color 0.2s;
+
+      a {
+        color: $otherbtn;
+        width: 100%;
+      }
+    }
+
+    a {
+      color: black;
+    }
+  }
+}

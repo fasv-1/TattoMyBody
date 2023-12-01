@@ -1,0 +1,55 @@
+.newcont {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  @media (min-width: $descktop-fhd) {
+    margin: 0 2rem 2rem 2rem;
+  }
+
+  .title {
+    color: $otherbtn;
+    text-align: start;
+    margin: 2rem 0 1rem 1rem;
+    width: 100%;
+  }
+
+  .author {
+    display: flex;
+    flex-wrap: wrap;
+    color: #cccc;
+    margin: 0 0.5rem;
+    text-transform: capitalize;
+    font-size: 12px;
+
+    p {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+
+  .summary {
+    width: 100vw;
+
+    h3 {
+      color: #ccc;
+      margin: 1rem;
+    }
+  }
+
+  .newimg {
+    img {
+      width: 500px;
+      border-radius: 8px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .body {
+    margin: 1rem;
+  }
+}
